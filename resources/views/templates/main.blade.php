@@ -22,10 +22,10 @@
         <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{url('/Bout')}}">About</a>
+        <a class="nav-link" href="{{url('/about')}}">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="m{{url('/Mahasiswa')}}">Mahasiswa</a>
+        <a class="nav-link" href="{{url('/mahasiswa')}}">Mahasiswa</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{url('/students')}}">Students</a>
