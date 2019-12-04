@@ -1,6 +1,6 @@
 @extends('templates/main')
 
-@section('title','Detail Students')
+@section('judul','Detail Students')
 
 @section('container')
 
@@ -13,28 +13,28 @@
             @csrf
                 <div class="form-group">
                     <label for="nrp">NRP</label>
-                    <input type="text" class="form-control @error('nrp') is-invalid @enderror" id="nrp" placeholder="Masukin nrp" name="nrp" value="{{old('nrp')}}">
+                    <input type="text" class="form-control @error('nrp') is-invalid @enderror" id="nrp" placeholder="Masukin nrp" name="nrp" value="{{$student->nrp}}">
                     @error('nrp')
                         </div class="invalid-feedback">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="nama">NAMA</label>
-                    <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="Masukin nama" name="nama" value="{{old('nama')}}">
+                    <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="Masukin nama" name="nama" value="{{$student->nama}}">
                     @error('nama')
                         </div class="invalid-feedback">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Masukin email" name="email" value="{{old('email')}}">
+                    <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Masukin email" name="email" value="{{$student->email}}">
                     @error('email')
                         </div class="invalid-feedback">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="jurusan">jurusan</label>
-                    <input type="text" class="form-control @error('jurusan') is-invalid @enderror" id="jurusan" placeholder="Masukin jurusan" name="jurusan" value="{{old('jurusan')}}">
+                    <input type="text" class="form-control @error('jurusan') is-invalid @enderror" id="jurusan" placeholder="Masukin jurusan" name="jurusan" value="{{$student->jurusan}}">
                     @error('jurusan')
                         </div class="invalid-feedback">{{$message}}</div>
                     @enderror

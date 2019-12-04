@@ -1,6 +1,6 @@
 @extends('templates/main')
 
-@section('title','Detail Students')
+@section('judul','Detail Students')
 
 @section('container')
 
@@ -11,12 +11,12 @@
 
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
+                     <p class="card-text">{{$student->nrp}}</p>
                     <h5 class="card-title">{{$student->nama}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{$student->email}}</h6>
-                    <p class="card-text">{{$student->nrp}}</p>
                     <p class="card-text">{{$student->jurusan}}</p>
-                    <a href="{{$students->id}}/edit" class="btn btn-success">Ubah</a>
-                    <form action="/students/{{$students->id}}" method="post" class="d-inline">@method('delete')
+                    <a href="{{$student->id}}/edit" class="btn btn-success">Ubah</a>
+                    <form action="/students/{{$student->id}}" method="post" class="d-inline">@method('delete')
                     @csrf
                     <button type="submit" class="btb btn-danger">Delete</button>
                     </form>

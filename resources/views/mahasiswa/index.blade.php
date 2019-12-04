@@ -1,3 +1,4 @@
+
 @extends('templates/main')
 
 @section('judul','Daftar Mahasiswa')

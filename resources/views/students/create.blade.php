@@ -1,6 +1,6 @@
 @extends('templates/main')
 
-@section('title','Detail Students')
+@section('judul','Detail Students')
 
 @section('container')
 

@@ -1,6 +1,6 @@
 @extends('templates/main')
 
-@section('title','Daftar Mahasiswa')
+@section('judul','Daftar Students')
 
 @section('container')
 
@@ -9,6 +9,7 @@
         <div class="col">
             <h2 class="mt-3">Daftar Students</h2>
             <a href="/students/create" class="btn btn-primary my-3">Tambah Data Mahasisawa</a>
+
             @if(session('status'))
             <div class="alert alert-success">
               {{ session('status')}}
@@ -18,8 +19,10 @@
             @foreach($students as $student)
    
           <li class="list-group-item d-flex justify-content-between align-items-center">
+
           {{ $student->nama}}
-          <a href="/students/{{ $student->id) }}"
+
+          <a href="/students/{{ $student->id }}"
             class="badge badge-info">Show Detail</a>
 
           </li>

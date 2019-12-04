@@ -16,7 +16,7 @@ class StudentsController extends Controller
     public function index()
     {
         $students = Student::all();
-        return view('students/index',['students' => $students]);
+        return view('students.index',compact('students'));
     }
 
     /**
@@ -40,10 +40,11 @@ class StudentsController extends Controller
         $request->validate([
             
             'nrp' => 'required',
-            'nama' => 'required',
+            'nama' => 'required|size:9',
             'email' => 'required',
             'jurusan' => 'required'
         ]);
+
         Student::create($request->all());
         return redirect('/students')->with('status', 'Data Berhasil DItambahkan');
        }
@@ -67,7 +68,7 @@ class StudentsController extends Controller
      */
     public function edit(Student $student)
     {
-        return view('sudents/edit', ['students' => $student]);
+        return view('students/edit', ['student' => $student]);
     }
 
     /**
@@ -92,7 +93,7 @@ class StudentsController extends Controller
             'email' => $request->email,
             'jurusan' => $request->jurusan
         ]);
-       return Redirect('/students')->with('status'.'Data Berhasil diubah')
+       return Redirect('/students')->with('status','Data Berhasil diubah');
     }
 
     /**
