@@ -39,8 +39,8 @@ class StudentsController extends Controller
     {
         $request->validate([
             
-            'nrp' => 'required',
-            'nama' => 'required|size:9',
+            'nrp' => 'required|size:9',
+            'nama' => 'required',
             'email' => 'required',
             'jurusan' => 'required'
         ]);
